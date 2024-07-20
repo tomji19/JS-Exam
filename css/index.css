@@ -1,0 +1,302 @@
+body {
+  background-color: #000000e8;
+  color: white;
+}
+
+/* Nav */
+.openNav {
+  z-index: 155;
+}
+
+.sidenav {
+  z-index: 250;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/*lma ados*/
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.nav-footer {
+  padding: 100px 8px 8px 32px;
+}
+
+/*open */
+.open-close-icon {
+  cursor: pointer;
+  z-index: 101;
+}
+
+.logo {
+  width: 1.8rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+#leftMenu {
+  display: none;
+}
+/* Nav */
+
+/* Results + Card Desgin And Overlay Animation */
+.results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+}
+
+.now-playing-card {
+  height: 29rem;
+  width: 21rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.now-playing-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  display: grid;
+  text-overflow: ellipsis;
+}
+
+.card-release-date {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card-stars {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.card-rating {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.rating-circle {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #34c759;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  background-color: transparent;
+}
+
+.rating-value {
+  font-size: 1.2rem;
+  color: #34c759;
+  line-height: 1;
+  text-align: center;
+}
+
+.now-playing-card:hover .card-image {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+/* Media queries for responsive design */
+
+/* Search Results */
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+}
+
+#search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+/* Search Results */
+
+/* Scroll Button */
+.scroll-up-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 200;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Hidden by default */
+}
+
+.scroll-up-button:hover {
+  background-color: #333; /* Slightly lighter on hover */
+}
+
+.scroll-up-button i {
+  margin: 0;
+}
+
+/* Show the button when scrolled down */
+.show {
+  opacity: 1;
+}
+/* Scroll Button */
+
+/* Contact Us */
+.contact-us {
+  color: white;
+  padding: 2rem 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.contact-title {
+  text-align: start;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+
+.contact-us .container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 0.1rem solid white;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input::placeholder {
+  color: grey;
+}
+
+.submit-button {
+  display: block;
+  width: 10%;
+  padding: 0.75rem;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Contact Us */

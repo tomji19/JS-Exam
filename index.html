@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Search Button -->
+    <div class="search-container mb-3 mt-5 container w-50">
+      <input
+        type="text"
+        class="form-control search-input border rounded-5 bg-transparent text-white"
+        id="search-input"
+        placeholder="Search..."
+      />
+    </div>
+
+    <!-- Scroll Up Button -->
+    <div id="scrollUpButton" class="scroll-up-button">
+      <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+    <div
+      id="leftMenu"
+      class="sidenav min-vh-100 p-4 bg-black text-white nav-tab"
+    >
+      <a class="close-button" href="javascript:void(0)" id="closebtn">×</a>
+      <div class="nav-links">
+        <a id="search" href="#">Now Playing</a>
+        <a id="categories" href="#">Popular</a>
+        <a id="area" href="#">Top Rated</a>
+        <a id="ingredients" href="#">Trending</a>
+        <a id="contact" href="#">Upcoming</a>
+        <a id="contact-us" href="#">Contact Us</a>
+      </div>
+      <div class="nav-footer">
+        <div class="icons">
+          <i
+            id="facebook-icon"
+            class="fa-brands fa-facebook"
+            aria-hidden="true"
+          ></i>
+          <i id="x-icon" class="fa-brands fa-twitter" aria-hidden="true"></i>
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="footer">
+          <p>Copyright © 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-bar d-flex top-0 position-fixed min-vh-100">
+      <div
+        class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
+      >
+        <img
+          class="logo"
+          id="logo"
+          src="images/logo.png"
+          alt="movie app logo in the nav section"
+        />
+        <i
+          class="fa-solid open-close-icon fa-2x fa-align-justify openNav"
+          id="open"
+        ></i>
+        <div>
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Now Playing Placeholder -->
+    <div class="container">
+      <div class="row" id="results-container">
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contactUs" class="contact-us">
+      <div class="container">
+        <h2 class="contact-title">Contact Us</h2>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Your Phone Number"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Your Age"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Your Password"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="reenterPassword"
+                name="reenterPassword"
+                placeholder="Re-enter Password"
+                required
+              />
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
